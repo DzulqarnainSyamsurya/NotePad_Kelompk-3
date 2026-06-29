@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NotePed</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="web-container">
+        <header class="main-header">
+            <div class="brand-zone">
+                <h1 class="logo-title">NotePad</h1>
+            </div>
+        </header>
+
+        <main class="content-grid">
+            
+            <aside class="sidebar-layout">
+                <section class="card-box widgets">
+                    <h2 class="box-title">Kategori</h2>
+                    
+                    <div class="category-form">
+                        <input type="text" id="category-input" placeholder="Kategori baru...">
+                        <button type="button" id="btn-add-category">＋</button>
+                    </div>
+
+                    <ul id="category-list">
+                        </ul>
+                </section>
+
+                <section class="card-box widgets">
+                    <h2 class="box-title">Catatan</h2>
+                    <textarea id="notes-area" rows="6" placeholder="Tulis catatan tambahan di sini..."></textarea>
+                </section>
+            </aside>
+
+            <section class="main-notes-zone">
+                <form id="notes-form" class="notes-form-group">
+                    <input type="text" id="notes-input" placeholder="Ketik tugas baru..." required>
+                    
+                    <select id="notes-category-select" required>
+                        <option value="" disabled selected>Kategori</option>
+                    </select>
+
+                    <input type="date" id="notes-deadline-input" required title="Pilih tanggal deadline">
+
+                    <button type="submit" class="btn-add">Tambah</button>
+                </form>
+
+                <div class="stats-counter-paper">
+                    Total: <span id="active-count">0</span> belum selesai &middot; <span id="completed-count">0</span> selesai
+                </div>
+
+                <ul id="notes-list" class="list-container">
+                    </ul>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
